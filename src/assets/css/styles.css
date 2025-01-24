@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Search Bar */
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Card List */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card-list .card:not(.searching) {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.card-header {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.card-header h2 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.status {
+  background: #d9f7f2;
+  color: #00bfa5;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Button Section */
+.card-footer {
+  margin-top: 15px;
+}
+
+.view-button {
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+/* Loading and No More Data */
+.loading {
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  color: #777;
+}
+
+.no-more-data {
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  color: #777;
+}
+
+/* Card Expansion */
+.card-details {
+  margin-top: 15px;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.card-details small {
+  color: #777;
+  font-size: 12px;
+}
+
+.card-details .details-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.mission-patch {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.card-details p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Status Badge Styles */
+.status.upcoming {
+  background: #d9f7f2;
+  color: #00bfa5;
+}
+
+.status.success {
+  background: #e0f3ff;
+  color: #007bff;
+}
+
+.status.failed {
+  background: #ff0000;
+  color: #ffff;
+}
