@@ -31,8 +31,6 @@ function SpaceContent() {
       } else {
         setHasMore(false);
       }
-
-      console.log('>>DATA', data);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
